@@ -1,0 +1,24 @@
+CSY Agent (BC Identity Gateway project) portable candidate
+
+This packaging does not grant a new open-source license to the Gateway project.
+Distribution permissions for the Gateway remain with its owner.
+
+Python / Python Software Foundation: interpreter and standard library.
+See licenses/Python.txt, copied from the exact build interpreter distribution.
+https://docs.python.org/3/license.html
+
+PyInstaller: executable bootloader and frozen-module support.
+See licenses/PyInstaller.txt, copied from the exact installed build tool.
+PyInstaller's license contains a distribution exception for bundled applications.
+https://pyinstaller.org/en/stable/license.html
+
+OpenSSL: TLS support in the bundled CPython SSL module.
+See licenses/OpenSSL.txt, supplied for the runtime version recorded by the build.
+https://openssl-library.org/source/license/
+
+The build records bundled runtime DLLs and third-party versions for review.
+Python's Windows distribution includes Microsoft Visual C++ runtime DLLs.
+Review the applicable runtime redistribution terms before external distribution:
+https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files
+
+No third-party model, Harness runtime, BC software or account data is bundled.

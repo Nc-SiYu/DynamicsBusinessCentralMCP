@@ -1,0 +1,18 @@
+# Generated private state; never publish a used application directory.
+data/
+.runtime/
+private/
+local-config/
+__pycache__/
+*.py[cod]
+*.dpapi
+.env
+.env.*
+*.log
+*.pem
+*.pfx
+*.p12
+*.key
+*.bak
+*.bak.zip
+PRIVATE-BACKUP*/
