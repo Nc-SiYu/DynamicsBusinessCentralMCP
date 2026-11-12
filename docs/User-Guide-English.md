@@ -13,7 +13,7 @@
 Install the required software before following the connection steps below. Do not reinstall software already installed at compatible versions.
 
 1. **Windows 10/11 (64-bit) and a browser.**
-2. **Complete application folder (DPBCMCP, containing CSY.exe):** Obtain the provider's complete Windows x64 ZIP and extract it to a writable location. Once published on GitHub, use the application ZIP attached to the Release; the automatically generated Source code ZIP may not contain the runtime files.
+2. **Complete application folder (containing CSY.exe):** Open [this repository](https://github.com/Nc-SiYu/DynamicsBusinessCentralMCP), choose **Code → Download ZIP**, and extract the entire ZIP to a writable location. Open the extracted **DynamicsBusinessCentralMCP-main** folder, which contains `CSY.exe`, `_internal/` and `integration/`. Runtime files are included in the repository; a separate Release is not required.
 3. **DeepSeek Harness:** DSH **0.1.2-alpha.1** / Cordis **4.0.1**; sign-in details.
 4. **Node.js 24.**
 5. **Python 3.12+.**
@@ -165,7 +165,7 @@ The scripts discover PowerShell 7 automatically. If prompted, supply the full pa
 | `licenses/` | Third-party licenses |
 | `THIRD-PARTY-NOTICES.txt` | Third-party notices |
 
-Keep the entire folder together. DPBCMCP is the folder name; the application remains `CSY.exe`. `_internal` and `integration` must stay beside the application.
+Keep the entire folder together. The downloaded folder is normally named DynamicsBusinessCentralMCP-main; the application is `CSY.exe`. `_internal` and `integration` must stay beside the application.
 
 File checksums are in [docs/FILES.sha256](FILES.sha256).
 

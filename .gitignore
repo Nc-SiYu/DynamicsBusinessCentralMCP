@@ -16,3 +16,6 @@ __pycache__/
 *.bak
 *.bak.zip
 PRIVATE-BACKUP*/
+
+# Bundled Python extension modules are required to run CSY.exe.
+!/_internal/*.pyd

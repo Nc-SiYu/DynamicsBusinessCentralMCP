@@ -1,0 +1,90 @@
+CSY Agent — START HERE / 从这里开始
+==================================
+
+中文
+----
+
+首次使用：
+1. 先阅读 docs/使用说明-中文版.md，准备其中列出的依赖和连接资料。
+2. 打开 CSY.exe，在页面保存 BC 连接；保留程序窗口。
+3. 打开 connect.cmd，按提示完成首次 Harness 接入。
+4. 在 Harness 配置模型，新建会话并选择 CSY Agent。
+
+日常启动：
+CSY.exe -> Start-Harness.cmd -> 浏览器中显示的 Harness 地址。
+connect.cmd 用于首次接入或显式重绑；日常启动使用 Start-Harness.cmd。
+停止 Gateway：在 CSY.exe 窗口输入 Q 并按 Enter，或按 Ctrl+C。
+
+连接 ID 或 token 改变后：
+1. 运行 CSY.exe，保存连接并保持运行；退出 Harness 宿主程序。
+2. 在本文件夹打开 cmd，运行：
+   call connect.cmd --refresh-binding && call Start-Harness.cmd
+3. 输入 yes；看到 Setup complete 后按任意键继续。打开 Harness，新建会话并选择 CSY Agent。
+
+文件说明：
+CSY.exe                  Gateway 主程序
+connect.cmd              首次接入 Harness；加 --refresh-binding 可显式重绑
+Start-Harness.cmd        日常启动 Harness
+docs/                    中英文使用指南、文件校验值
+_internal/               主程序运行依赖
+integration/             Harness 接入所需文件
+data/                    使用后生成的本地连接和设置
+licenses/                第三方许可证
+THIRD-PARTY-NOTICES.txt   第三方声明
+
+请保留完整文件夹。GitHub 下载目录通常名为 DynamicsBusinessCentralMCP-main，主程序为 CSY.exe。
+本程序未数字签名，Windows 可能显示未知发布者或安全提示。
+保存连接不代表 BC 已认证成功。接入的 BC 工具具备修改业务数据的能力。
+分享时使用未保存个人资料的发布副本，不分享使用后的 data 文件夹。
+
+English
+-------
+
+First use:
+1. Read docs/User-Guide-English.md and prepare the listed prerequisites.
+2. Open CSY.exe, save your BC connection, and keep its window open.
+3. Open connect.cmd and follow the first-time Harness setup prompts.
+4. Configure your model in Harness, start a new session, and select CSY Agent.
+
+Daily use:
+CSY.exe -> Start-Harness.cmd -> the displayed Harness address.
+Use connect.cmd for initial setup or explicit rebinding, and Start-Harness.cmd for daily starts.
+Stop the Gateway with Q then Enter, or Ctrl+C in its window.
+
+After a connection ID or token changes:
+1. Run CSY.exe, save the connection, and keep it running; exit the Harness host process.
+2. Open cmd in this folder and run:
+   call connect.cmd --refresh-binding && call Start-Harness.cmd
+3. Enter yes; after Setup complete, press any key to continue. Open Harness, start a new session, and select CSY Agent.
+
+Keep the entire folder together. The downloaded folder is normally named DynamicsBusinessCentralMCP-main; CSY.exe remains
+the application name. _internal and integration must stay beside CSY.exe.
+Guides are in docs; third-party notices and licenses are retained.
+File checksums are in docs/FILES.sha256.
+
+Required for Harness integration:
+DSH 0.1.2-alpha.1 / Cordis 4.0.1, Node.js 24, Python 3.12+,
+and x64 PowerShell 7. The Gateway EXE itself includes Python.
+Harness, Node.js, external Python/PowerShell, BC, model services and
+credentials are not included. Setup may ask for installation paths;
+it does not install dependencies.
+
+Default Gateway: http://127.0.0.1:8765.
+Advanced first launch: CSY.exe --port <free-port>.
+A saved address takes effect on the next launch.
+Do not use a port/profile occupied by another Gateway deployment.
+Saving connection data does not authenticate BC. Enabled BC tools can
+change business data.
+
+Local state is stored in data beside CSY.exe. Windows DPAPI ties protected
+data to the Windows user/machine. Share a clean distribution folder,
+never a used data folder. This copy is distributed as a complete folder.
+
+This application is unsigned; Windows may show security prompts.
+If Windows blocks it, contact the provider.
+No installer, service, firewall change, dependency upgrade or startup
+registration is performed. Verification on a clean computer remains pending.
+
+Alpha test candidate. See README.md for scope and DISTRIBUTION-NOTICE.md for project distribution status.
+PowerShell 7 is detected automatically; if prompted, supply your own installed pwsh.exe path.
+Already configured does not confirm that the binding or BC connection is valid.

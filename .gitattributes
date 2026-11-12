@@ -1,0 +1,2 @@
+# Preserve exact distributed bytes and checksum validity on all platforms.
+* -text

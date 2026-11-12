@@ -10,7 +10,7 @@ CSY Agent 用于通过本机 Gateway，将 DeepSeek Harness Web 连接到 Micros
 
 需要 Windows 10/11、支持原生 MCP 的 BC On-Prem 环境、有效且受信任的 HTTPS 证书、DSH 0.1.2-alpha.1 / Cordis 4.0.1、Node.js 24、Python 3.12+ 和 x64 PowerShell 7。
 
-1. 获取提供者发布的完整 ZIP，解压到可写目录，保留全部文件。
+1. 在[本仓库](https://github.com/Nc-SiYu/DynamicsBusinessCentralMCP)点击 **Code → Download ZIP**，解压到可写目录，保留全部文件。程序入口 `CSY.exe` 位于解压后的 `DynamicsBusinessCentralMCP-main` 文件夹内。
 2. 按[中文指南](docs/使用说明-中文版.md)配置 BC，打开 `CSY.exe` 并保存连接。
 3. 运行 `connect.cmd`，配置模型，新建会话并选择 **CSY Agent**。
 4. 先使用指南中的只读查询验证连接。日常启动使用 `CSY.exe` → `Start-Harness.cmd`。
@@ -29,7 +29,7 @@ CSY Agent connects DeepSeek Harness Web to native Microsoft Dynamics 365 Busines
 
 Requirements: Windows 10/11, BC On-Prem with native MCP, valid trusted HTTPS, DSH 0.1.2-alpha.1 / Cordis 4.0.1, Node.js 24, Python 3.12+ and x64 PowerShell 7.
 
-1. Obtain the provider's complete ZIP and extract it to a writable folder. Keep all files together.
+1. On [this repository](https://github.com/Nc-SiYu/DynamicsBusinessCentralMCP), choose **Code → Download ZIP** and extract it to a writable location. Keep all files together; `CSY.exe` is inside the extracted `DynamicsBusinessCentralMCP-main` folder.
 2. Follow the [English guide](docs/User-Guide-English.md), open `CSY.exe` and save the BC connection.
 3. Run `connect.cmd`, configure a model, create a session and select **CSY Agent**.
 4. Verify with the guide's read-only query. For later starts use `CSY.exe` → `Start-Harness.cmd`.
